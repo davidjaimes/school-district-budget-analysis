@@ -82,6 +82,8 @@ My final report includes each of the following:
 
 * Create a table that lists the average Reading Score for students of each grade level (9th, 10th, 11th, 12th) at each school.
 
+![reading-scores](images/reading-scores.png)
+
 ### Scores by School Spending
 
 * Create a table that breaks down school performances based on average Spending Ranges (Per Student). Use 4 reasonable bins to group school spending. Include in the table each of the following:
