@@ -9,14 +9,12 @@ students = pd.read_csv("Resources/students_complete.csv")
 # Combine the data into a single dataset
 data = pd.merge(students, schools, how="left", on="school_name")
 
-# Create group by school name and grade.
-group = data.groupby(['school_name', 'grade'])
-
-# This creates a pd.Series with two indices.
-math_scores = group['math_score'].mean()
-
-# Remove index names: school_name and grade.
-math_scores.index.names = [None] * 2
-
-# Unstack MultiIndex dataframe.
-print(math_scores.unstack()[['9th', '10th', '11th', '12th']])
+# Sample bins. Feel free to create your own bins.
+spending_bins = [0, 585, 615, 645, 675]
+group_names = ["<$585", "$585-615", "$615-645", "$645-675"]
+data['school_spending'] = pd.cut(
+    data['Per Student Budget'],
+    bins=spending_bins,
+    labels=group_names
+)
+print(data)
