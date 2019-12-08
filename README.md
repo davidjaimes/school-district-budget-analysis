@@ -62,17 +62,7 @@ My final report includes each of the following:
 
 ### Top Performing Schools (By Passing Rate)
 
-* Create a table that highlights the top 5 performing schools based on Overall Passing Rate. Include:
-  * School Name
-  * School Type
-  * Total Students
-  * Total School Budget
-  * Per Student Budget
-  * Average Math Score
-  * Average Reading Score
-  * % Passing Math
-  * % Passing Reading
-  * Overall Passing Rate (Average of the above two)
+* Create a table that highlights the top 5 performing schools based on Overall Passing Rate. Include all of the same metrics as above.
   
 ![top-performing](images/top-performing.png)
 
@@ -85,6 +75,8 @@ My final report includes each of the following:
 ### Math Scores by Grade
 
 * Create a table that lists the average Math Score for students of each grade level (9th, 10th, 11th, 12th) at each school.
+
+![math-scores](images/math-scores.png)
 
 ### Reading Scores by Grade
 
