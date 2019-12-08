@@ -60,7 +60,7 @@ My final report includes each of the following:
   * % Passing Reading
   * Overall Passing Rate (Average of the above two)
 
-![school-summary](images/school-summary.png)
+![top-performing](images/top-performing.png)
 
 ### Top Performing Schools (By Passing Rate)
 
