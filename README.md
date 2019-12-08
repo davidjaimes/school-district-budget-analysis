@@ -1,8 +1,36 @@
 ### Background
 
-Example task of a Chief Data Scientist for a city's school district. In this capacity, you'll be helping the school board and mayor make strategic decisions regarding future school budgets and priorities. As a first task, you've been asked to analyze the district-wide standardized test results. You'll be given access to every student's math and reading scores, as well as various information on the schools they attend. Your responsibility is to aggregate the data to and showcase obvious trends in school performance.
+Example task of a Chief Data Scientist for a city's school district. In this capacity, I helped the school board and mayor make strategic decisions regarding future school budgets and priorities. As a first task, I was asked to analyze the district-wide standardized test results. I was given access to every student's math and reading scores, as well as various information on the schools they attend. My responsibility is to aggregate the data to and showcase obvious trends in school performance.
 
-Your final report should include each of the following:
+Sample of students CSV file:
+```
+Student ID,student_name,gender,grade,school_name,reading_score,math_score
+0,Paul Bradley,M,9th,Huang High School,66,79
+1,Victor Smith,M,12th,Huang High School,94,61
+2,Kevin Rodriguez,M,12th,Huang High School,90,60
+3,Dr. Richard Scott,M,12th,Huang High School,67,58
+4,Bonnie Ray,F,9th,Huang High School,97,84
+5,Bryan Miranda,M,9th,Huang High School,94,94
+6,Sheena Carter,F,11th,Huang High School,82,80
+7,Nicole Baker,F,12th,Huang High School,96,69
+8,Michael Roth,M,10th,Huang High School,95,87
+```
+
+Sample of schools CSV file:
+```
+School ID,school_name,type,size,budget
+0,Huang High School,District,2917,1910635
+1,Figueroa High School,District,2949,1884411
+2,Shelton High School,Charter,1761,1056600
+3,Hernandez High School,District,4635,3022020
+4,Griffin High School,Charter,1468,917500
+5,Wilson High School,Charter,2283,1319574
+6,Cabrera High School,Charter,1858,1081356
+7,Bailey High School,District,4976,3124928
+8,Holden High School,Charter,427,248087
+```
+
+My final report includes each of the following:
 
 ### District Summary
 
@@ -48,7 +76,7 @@ Your final report should include each of the following:
 
 * Create a table that highlights the bottom 5 performing schools based on Overall Passing Rate. Include all of the same metrics as above.
 
-### Math Scores by Grade\*\*
+### Math Scores by Grade
 
 * Create a table that lists the average Math Score for students of each grade level (9th, 10th, 11th, 12th) at each school.
 
