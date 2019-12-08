@@ -43,6 +43,8 @@ My final report includes each of the following:
   * % Passing Math
   * % Passing Reading
   * Overall Passing Rate (Average of the above two)
+  
+![district-summary]:/images/district-summary.png
 
 ### School Summary
 
