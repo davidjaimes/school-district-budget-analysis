@@ -60,6 +60,8 @@ My final report includes each of the following:
   * % Passing Reading
   * Overall Passing Rate (Average of the above two)
 
+![school-summary](images/school-summary.png)
+
 ### Top Performing Schools (By Passing Rate)
 
 * Create a table that highlights the top 5 performing schools based on Overall Passing Rate. Include:
