@@ -9,30 +9,28 @@ students = pd.read_csv("Resources/students_complete.csv")
 # Combine the data into a single dataset
 data = pd.merge(students, schools, how="left", on="school_name")
 
-# When you perform unique on Pandas Series it turns to Numpy array.
-# This is the reason we are able to use np.ndarray.size attribute.
-total_schools = data['school_name'].unique().size
-total_students = data['Student ID'].unique().size
-total_budget =  data['budget'].unique().sum()
+group = data.groupby(['school_name'])
+school_name = group.groups.keys()
+school_type = group['type'].unique().explode()
+total_students = group.size()
+total_budget = group['budget'].unique().explode()
+budget_per_student = np.array(total_budget) / total_students
+average_math = group['math_score'].mean()
+average_reading = group['reading_score'].mean()
+passing_math = np.array([np.sum(val >= 70) for (_, val) in group['math_score']])
+passing_reading = np.array([np.sum(val >= 70) for (_, val) in group['reading_score']])
+overall_passing = (passing_math + passing_reading) / 2
 
-# Find average math and reading scores.
-average_math_score = data['math_score'].mean()
-average_reading_score = data['reading_score'].mean()
 
-# Use np.sum() to only count True elements in boolean array.
-passing_math = np.sum(data['math_score'] >= 70) / total_students
-passing_reading = np.sum(data['reading_score'] >= 70) / total_students
-overall_average_rate = (average_math_score + average_reading_score) / 2
-
-# Need to put index if all values are scalars.
-district_summary = pd.DataFrame({
-    'Total Schools': total_schools,
-    'Total Students': f'{total_students:,}',
-    'Total Budget': f'${total_budget:,.2f}',
-    'Average Math Score': f'{average_math_score:.6f}',
-    'Average Reading Score': f'{average_reading_score:.6f}',
-    '% Passing Math': f'{100 * passing_math:.6f}',
-    '% Passing Reading': f'{100 * passing_reading:.6f}',
-    '% Overall Average Score': f'{overall_average_rate:.6}',
-}, index=[0])
-print(district_summary)
+school_summary = pd.DataFrame({
+    'School Type':  school_type,
+    'Total Students': total_students,
+    'Total Budget': [f'${x:,.2f}' for x in total_budget],
+    'Per Student Budget': [f'${x:,.2f}' for x in budget_per_student],
+    'Average Math Score': average_math,
+    'Average Reading Score': average_reading,
+    '% Passing Math': 100 * passing_math / total_students,
+    '% Passing Reading': 100 * passing_reading / total_students,
+    '% Overall Passing Rate': 100 * overall_passing / total_students
+}, index=school_name)
+print(school_summary.sort_values(by='% Overall Passing Rate', ascending=False).head(5))
