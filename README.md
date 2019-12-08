@@ -99,6 +99,8 @@ My final report includes each of the following:
 
 * Repeat the above breakdown, but this time group schools based on a reasonable approximation of school size (Small, Medium, Large).
 
+![school-size](images/school-size.png)
+
 ### Scores by School Type
 
 * Repeat the above breakdown, but this time group schools based on school type (Charter vs. District).
