@@ -60,8 +60,6 @@ My final report includes each of the following:
   * % Passing Reading
   * Overall Passing Rate (Average of the above two)
 
-![top-performing](images/top-performing.png)
-
 ### Top Performing Schools (By Passing Rate)
 
 * Create a table that highlights the top 5 performing schools based on Overall Passing Rate. Include:
@@ -75,10 +73,14 @@ My final report includes each of the following:
   * % Passing Math
   * % Passing Reading
   * Overall Passing Rate (Average of the above two)
+  
+![top-performing](images/top-performing.png)
 
 ### Bottom Performing Schools (By Passing Rate)
 
 * Create a table that highlights the bottom 5 performing schools based on Overall Passing Rate. Include all of the same metrics as above.
+
+![bottom-performing](images/bottom-performing.png)
 
 ### Math Scores by Grade
 
