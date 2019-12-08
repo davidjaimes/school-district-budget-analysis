@@ -93,6 +93,8 @@ My final report includes each of the following:
   * % Passing Reading
   * Overall Passing Rate (Average of the above two)
 
+![school-spending](images/school-spending.png)
+
 ### Scores by School Size
 
 * Repeat the above breakdown, but this time group schools based on a reasonable approximation of school size (Small, Medium, Large).
